@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "813165922428",
+    "project_id": "shoespot-1e1de",
+    "storage_bucket": "shoespot-1e1de.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813165922428:android:bc5d929fae8af0f510e1f9",
+        "android_client_info": {
+          "package_name": "com.example.cleanproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBScTQnG8TYu5OofG0wQEtTrUF-ePuTJFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
