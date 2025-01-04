@@ -45,7 +45,6 @@ void main() async {
 
   final GetUserStateUseCase getUserStateUseCase = GetUserStateUseCase(helper);
 
-  //WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
       options: const FirebaseOptions(
           apiKey: "AIzaSyBScTQnG8TYu5OofG0wQEtTrUF-ePuTJFE",
