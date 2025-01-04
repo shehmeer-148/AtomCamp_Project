@@ -2,17 +2,18 @@
 import 'package:cleanproject/domain/entites/Shoedata_Entities.dart';
 
 class ShoeDataModel{
-
+  final int id;
   final String title;
   final String description;
   final double price;
   final String image;
   final List<String> images;
 
-  ShoeDataModel({required this.title,required this.price, required this.description,required this.image,required this.images});
+  ShoeDataModel({required this.id ,required this.title,required this.price, required this.description,required this.image,required this.images});
 
   factory ShoeDataModel.fromjson(Map<String, dynamic> jsondata){
     return ShoeDataModel(
+        id: jsondata['id'],
         title: jsondata['title']?? "Nike jordan",
         price: (jsondata['price'] ?? 869).toDouble(),
         description: jsondata['description'] ?? "Step into summer with style in our denim espadrille sandals. Featuring a braided jute sole for a classic touch and adjustable denim straps for a snug fit",
@@ -24,6 +25,7 @@ class ShoeDataModel{
 
   ShoeDataEntities toEntities(){
     return ShoeDataEntities(
+        id:  id,
         title: title,
         description: description,
         price: price,

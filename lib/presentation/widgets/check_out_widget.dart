@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../config/App constants/app_colors.dart';
 import '../../config/utils/ScreenSize_class.dart';
@@ -71,6 +72,14 @@ class CheckOutWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               color: Appcolors.scaffoldcolor
             ),
+            // child: GoogleMap(
+            //   initialCameraPosition: CameraPosition(target: LatLng(30, 72)),
+            //   onMapCreated: (GoogleMapController controller) {
+            //   },
+            //   myLocationEnabled: true,
+            //   myLocationButtonEnabled: true,
+            //   zoomControlsEnabled: true,
+            // ),
           ),
           Text("Payment Method",style: TextTheme.of(context).bodyLarge,),
           Row(mainAxisAlignment: MainAxisAlignment.start,

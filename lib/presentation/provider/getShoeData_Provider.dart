@@ -1,4 +1,3 @@
-import 'package:cleanproject/data_layer/model/shoe_data_model.dart';
 import 'package:cleanproject/domain/entites/Shoedata_Entities.dart';
 import 'package:cleanproject/domain/usecases/Get_Shoes_Data_usecase.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +7,7 @@ class GetShoeDataProvider extends ChangeNotifier{
   List<ShoeDataEntities>? shoesdata;
   bool isloading = false;
 
-  GetShoeDataProvider(this._shoesDataUseCase){startloading();}
+  GetShoeDataProvider(this._shoesDataUseCase);
 
   List<ShoeDataEntities>? get getshoesdata => shoesdata;
 

@@ -1,11 +1,14 @@
+import 'package:cleanproject/presentation/provider/Cart_Item_Provider.dart';
+import 'package:cleanproject/presentation/widgets/Appbar_BackButton.dart';
 import 'package:cleanproject/presentation/widgets/Custom_Dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../config/App constants/app_colors.dart';
 import '../../widgets/check_out_widget.dart';
 
 class CheckOutPage extends StatefulWidget {
-  const CheckOutPage({super.key});
+  const CheckOutPage({super.key,});
 
   @override
   State<CheckOutPage> createState() => _CheckOutPageState();
@@ -17,6 +20,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Checkout"),
+        leading:const AppBarBackButton(),
       ),
       body: Column(
         children: [
@@ -49,31 +53,31 @@ class _CheckOutPageState extends State<CheckOutPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Subtotal"),
-                    Text("\$1250.00"),
+                   const Text("Subtotal"),
+                   Text("\$${Provider.of<CartItemProvider>(context).calculateSubtotal}"),
                   ],
                 ),
                 const SizedBox(height: 8),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Shopping"),
-                    Text("\$40.90"),
+                   const Text("Shipping"),
+                    Text("\$${Provider.of<CartItemProvider>(context).calculateShipping}"),
                   ],
                 ),
                 const SizedBox(height: 8),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                  const  Text(
                       "Total Cost",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "\$1690.99",
+                      "\$${Provider.of<CartItemProvider>(context).calculateTotalCost}",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ],

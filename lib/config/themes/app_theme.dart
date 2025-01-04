@@ -45,6 +45,9 @@ class Mytheme{
       iconTheme: IconThemeData(
         size: 20,
       ),
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: Appcolors.secondarycolor
+      ),
       textTheme: MyTextTheme.textthemelight(context),
       useMaterial3: true,
     );

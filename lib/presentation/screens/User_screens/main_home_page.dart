@@ -9,6 +9,7 @@ import 'package:cleanproject/presentation/screens/User_screens/profile_page.dart
 import 'package:cleanproject/presentation/widgets/AppBarAction_Button.dart';
 import 'package:cleanproject/presentation/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
@@ -37,6 +38,10 @@ class _MainHomePageState extends State<MainHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.dark
+        ),
         title:  Row(mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.location_pin, color: Colors.red),
